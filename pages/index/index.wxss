@@ -59,6 +59,9 @@ font-size: 38rpx;
 color: #F5F5F5;
 font-size: 25rpx;
 }
+.m-home_pic {
+  text-align: center;
+}
 @keyframes hover
 {
 from {transform: scale(1);}

@@ -28,4 +28,7 @@
   <view class="m-home_h3"><text>普通号/专家号</text></view>
   </view>
   </view>
+  <view class="m-home_pic">
+  <image style="width:70%;" src="../../images/home.png"></image>
+  </view>
 </view>
