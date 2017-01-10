@@ -1,11 +1,8 @@
 <import src="../../components/doctor-item/doctorItem.wxml"/>
 <view class="container">
-<view class="m-doctor_tar" wx:if="{{ experts && experts.length > 0 }}">专家号</view>
-<block wx:for="{{ experts }}" wx:for-item="expert" wx:key="expert.doctorCode">
-    <template is="m-doctor-item" data="{{doctor: expert}}" />
-  </block>
-<view class="m-doctor_tar" wx:if="{{ normals && normals.length > 0 }}">普通号</view>
-<block wx:for="{{ normals }}" wx:for-item="normal" wx:key="normal.doctorCode">
-    <template is="m-doctor-item" data="{{doctor: normal}}" />
+<view class="m-doctor_tar" wx:if="{{ doctors && doctors.length > 0 }}">医生列表</view>
+<view class="m-doctor_nodata" wx:if="{{ doctors && doctors.length == 0 }}">该科室暂无医生数据</view>
+<block wx:for="{{ doctors }}" wx:for-item="doctor" wx:key="doctor.doctorCode">
+    <template is="m-doctor-item" data="{{doctor: doctor}}" />
   </block>
 </view>

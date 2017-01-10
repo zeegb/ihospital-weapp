@@ -38,8 +38,11 @@ export const getDeptList = (params) => {
 };
 
 export const getDoctorList = (params) => {
-  console.log(params)
-  return wxRequest(params, `${apiURL}/node-business/api/hospitals/getScheduleTypeDocs?access_token=${token}`);
+  return wxRequest(params, `${apiURL}/node-business/api/hospitals/getDoctorsByDepartment?access_token=${token}`);
+};
+
+export const getDoctorInfo = (params) => {
+  return wxRequest(params, `${apiURL}/node-business/api/hospitals/getDoctorDetail?access_token=${token}`);
 };
 
 export const getAccessToken = (params) => {

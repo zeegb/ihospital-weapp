@@ -31,7 +31,6 @@ Page({
     });
   },
   viewDoctorList(e) {
-      console.log('dianji11111111')
     const ds = e.currentTarget.dataset;
     wx.navigateTo({
       url: `../doctor/doctor?hid=${ds.hid}&did=${ds.did}`

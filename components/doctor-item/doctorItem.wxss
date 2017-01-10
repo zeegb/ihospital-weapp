@@ -31,7 +31,22 @@
     flex: 1;
     padding: 0 15rpx;
 }
+.m-doctor-item_text .m-doctor-item_text_info {
+    color: #808080;
+    padding: 5rpx;
+    font-size: 14rpx;
+    margin-left: 15rpx;
+    border: 2rpx solid #808080;
+    border-radius: 5rpx;
+}
+.m-doctor-item_text .m-doctor-item_text_true {
+    border: 2rpx solid #3CA0FF;
+}
 .m-doctor-item .m-doctor-item_title {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
     color: #505050;
 }
 .m-doctor-item .m-doctor-item_detail {

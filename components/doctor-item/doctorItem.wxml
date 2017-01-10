@@ -1,9 +1,14 @@
 <template name="m-doctor-item">
-<view class="m-doctor-item" data-hid="{{doctor.doctorCode}}" bindtap="viewDoctor">
-<image class="m-doctor-item_img" src="{{doctor.logo}}"></image>
+<view class="m-doctor-item" data-did="{{doctor.doctorCode}}" bindtap="viewDoctor">
+<image class="m-doctor-item_img" src="{{doctor.avatar || '../../images/userHead.png'}}"></image>
 <view class="m-doctor-item_text">
-  <view class="m-doctor-item_title"><text>{{doctor.doctorName}}</text></view>
-  <view class="m-doctor-item_detail"><text>{{doctor.address}}</text></view>
+  <view class="m-doctor-item_title">
+  <view class="m-doctor-item_text_name">{{doctor.doctorName}}</view>
+  <view class="m-doctor-item_text_info m-doctor-item_text_true">{{doctor.title}}</view>
+  <view class="m-doctor-item_text_info m-doctor-item_text_true">{{doctor.fee}}元</view>
+  <view class="m-doctor-item_text_info {{doctor.is_hot ? m-doctor-item_text_true : ''}}">热门</view>
+  </view>
+  <view class="m-doctor-item_detail"><text>{{doctor.major}}</text></view>
   </view>
 </view>
 </template>

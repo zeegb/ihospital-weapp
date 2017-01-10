@@ -2,9 +2,7 @@ import {getDoctorList} from '../../utils/api.js'
 Page({
     data: {
     title: '选择医生',
-    doctors: null,
-    experts: null,
-    normals: null
+    doctors: null
   },
   onReady() {
     const self = this;
@@ -27,12 +25,10 @@ Page({
             deptSn:deptSn
         },
       success: (res) => {
-        console.log(res)
+        console.log(res);
         const doctors = res.data && res.data.data;
         self.setData({
-          doctors,
-          experts: doctors.expert,
-          normals: doctors.normal
+          doctors
         });
         wx.hideToast();
       },
