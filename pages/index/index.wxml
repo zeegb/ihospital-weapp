@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="m-home m-home-register" hover="{{true}}" hover-class="press_hover" data-destination="register" bindtap="viewNext">
+  <image class="m-home_img" src="../../images/register.png"></image>
+  <view class="m-home_text">
+  <view class="m-home_h2"><text>预约挂号</text></view>
+  <view class="m-home_h3"><text>普通号/专家号</text></view>
+  </view>
+  </view>
+  <view class="m-home m-home-current" hover="{{true}}" hover-class="press_hover">
+  <image class="m-home_img" src="../../images/current.png"></image>
+  <view class="m-home_text">
+  <view class="m-home_h2"><text>实时叫号</text></view>
+  <view class="m-home_h3"><text>普通号/专家号</text></view>
+  </view>
+  </view>
+   <view class="m-home m-home-report" hover="{{true}}" hover-class="press_hover">
+  <image class="m-home_img" src="../../images/report.png"></image>
+  <view class="m-home_text">
+  <view class="m-home_h2"><text>查看报告</text></view>
+  <view class="m-home_h3"><text>实时查看最新检验检查报告单</text></view>
+  </view>
+  </view>
+   <view class="m-home m-home-inhospital" hover="{{true}}" hover-class="press_hover">
+  <image class="m-home_img" src="../../images/inhospital.png"></image>
+  <view class="m-home_text">
+  <view class="m-home_h2"><text>住院服务</text></view>
+  <view class="m-home_h3"><text>普通号/专家号</text></view>
+  </view>
+  </view>
+</view>

@@ -1,0 +1,67 @@
+/**index.wxss**/
+.m-home {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100rpx;
+  padding: 20rpx;
+  margin: 20rpx 20rpx 0;
+  border-radius: 5rpx;
+}
+.m-home-register {
+  background: #3CA0FF;
+  box-shadow: 5rpx 5rpx 5rpx #3CA0FF;
+}
+.m-home-report {
+  background: #4abdcc;
+  box-shadow: 5rpx 5rpx 5rpx #4abdcc;
+}
+.m-home-current {
+  background: #00BFFF;
+  box-shadow: 5rpx 5rpx 5rpx #00BFFF;
+}
+.m-home-inhospital {
+  background: #FF6347;
+  box-shadow: 5rpx 5rpx 5rpx #FF6347;
+}
+.press_hover {
+  animation: hover 1s;
+}
+.m-home::after{
+  opacity: 0.5;
+  border: 4rpx solid transparent;
+  border-top: 4rpx solid 	#808080;
+  border-right: 4rpx solid 	#808080;
+  transform: translateY(-5rpx) rotate(45deg);
+  width: 10rpx;
+  height: 10rpx;
+  position: absolute;
+  top: 50%;
+  right: 20rpx;
+  content: ''
+}
+.m-home .m-home_img {
+  height: 100rpx;
+  width: 100rpx;
+  margin-left: 15rpx;
+}
+.m-home .m-home_text {
+  margin-left: 30rpx;
+}
+.m-home .m-home_h2 {
+color: #FFFFFF;
+font-size: 38rpx;
+}
+.m-home .m-home_h3 {
+  opacity: 0.7;
+color: #F5F5F5;
+font-size: 25rpx;
+}
+@keyframes hover
+{
+from {transform: scale(1);}
+to {transform: scale(0.97);}
+}

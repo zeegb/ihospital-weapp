@@ -1,0 +1,31 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/register/register"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3CA0FF",
+    "navigationBarTitleText": "网络医院",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#b0b0b0",
+    "selectedColor": "#3CA0FF",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/shouye.png",
+      "selectedIconPath": "images/shouye-pressed.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "iconPath": "images/me.png",
+      "selectedIconPath": "images/me-pressed.png",
+      "text": "我的"
+    }]
+  },
+  "debug": true
+}
