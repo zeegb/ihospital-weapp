@@ -1,0 +1,23 @@
+.m-depts {
+    background: white;
+    padding: 0 0 0 20rpx;
+}
+.m-dept{
+    position: relative;
+    padding: 15rpx 0;
+    color: #505050;
+    border-bottom: dotted 1px rgba(216,216,216,1);
+}
+.m-dept::after{
+  opacity: 0.5;
+  border: 2rpx solid transparent;
+  border-top: 2rpx solid 	#808080;
+  border-right: 2rpx solid 	#808080;
+  transform: translateY(-5rpx) rotate(45deg);
+  width: 10rpx;
+  height: 10rpx;
+  position: absolute;
+  top: 50%;
+  right: 30rpx;
+  content: ''
+}

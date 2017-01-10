@@ -1,0 +1,9 @@
+<template name="m-doctor-item">
+<view class="m-doctor-item" data-hid="{{doctor.doctorCode}}" bindtap="viewDoctor">
+<image class="m-doctor-item_img" src="{{doctor.logo}}"></image>
+<view class="m-doctor-item_text">
+  <view class="m-doctor-item_title"><text>{{doctor.doctorName}}</text></view>
+  <view class="m-doctor-item_detail"><text>{{doctor.address}}</text></view>
+  </view>
+</view>
+</template>

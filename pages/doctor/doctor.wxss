@@ -1,0 +1,10 @@
+@import "../../components/doctor-item/doctorItem.wxss";
+.m-doctor_tar {
+    width: 100%;
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 20rpx;
+    padding-left: 15rpx;
+    color: rgba(121,121,121,1);
+    border-bottom: solid 1px rgba(216, 216, 216, 1);
+}

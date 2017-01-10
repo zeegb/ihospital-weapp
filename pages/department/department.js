@@ -1,8 +1,8 @@
-import {getHospitalList} from '../../utils/api.js'
+import {getDeptList} from '../../utils/api.js'
 Page({
     data: {
-    title: '选择医院',
-    hospitals: null
+    title: '选择科室',
+    depts: null
   },
   onReady() {
     const self = this;
@@ -11,27 +11,30 @@ Page({
     });
   },
   onLoad(options) {
+    const hospitalCode = options.hid;
     const self = this;
     wx.showToast({
       title: '正在加载',
       icon: 'loading',
       duration: 10000,
     });
-    getHospitalList({
+    getDeptList({
+        data: {hospitalCode: hospitalCode},
       success: (res) => {
         console.log(res)
-        const hospitals = res.data && res.data.data;
+        const depts = res.data && res.data.data;
         self.setData({
-          hospitals,
+          depts,
         });
         wx.hideToast();
       },
     });
   },
-  viewDeptList(e) {
+  viewDoctorList(e) {
+      console.log('dianji11111111')
     const ds = e.currentTarget.dataset;
     wx.navigateTo({
-      url: `../department/department?hid=${ds.hid}`
+      url: `../doctor/doctor?hid=${ds.hid}&did=${ds.did}`
     })
   }
 })

@@ -1,0 +1,7 @@
+<view class="container">
+<view class="m-depts">
+<view class="m-dept" wx:for="{{depts}}" wx:for-item="dept" wx:key="dept.deptCode" data-did="{{dept.deptSn}}" data-hid="{{dept.hospitalCode}}" bindtap="viewDoctorList">
+<text>{{dept.deptName}}</text>
+</view>
+</view>
+</view>
