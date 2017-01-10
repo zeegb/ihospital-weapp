@@ -1,0 +1,6 @@
+<import src="../../components/hospital-item/hospitalItem.wxml"/>
+<view class="container">
+<block wx:for="{{ hospitals }}" wx:for-item="hospital" wx:key="hospital.hospitalCode">
+    <template is="m-hospital-item" data="{{hospital: hospital}}" />
+  </block>
+</view>

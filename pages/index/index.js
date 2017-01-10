@@ -15,7 +15,6 @@ Page({
   //事件处理函数
   viewNext(e) {
     const ds = e.currentTarget.dataset;
-    console.log(ds)
     wx.navigateTo({
       url: `../${ds.destination}/${ds.destination}`
     });

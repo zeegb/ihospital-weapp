@@ -1,0 +1,9 @@
+<template name="m-hospital-item">
+<view class="m-hospital-item">
+<image class="m-hospital-item_img" src="{{hospital.logo}}"></image>
+<view class="m-hospital-item_text">
+  <view class="m-hospital-item_title"><text>{{hospital.hospitalName}}</text></view>
+  <view class="m-hospital-item_detail"><text>{{hospital.address}}</text></view>
+  </view>
+</view>
+</template>
