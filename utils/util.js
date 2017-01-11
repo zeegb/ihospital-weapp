@@ -16,6 +16,16 @@ function formatNumber(n) {
   return n[1] ? n : '0' + n
 }
 
+function getDateStr(date) {
+  var _year = date.getFullYear();
+  var _month = date.getMonth() + 1;
+  var _d = date.getDate();
+  _month = (_month > 9) ? ("" + _month) : ("0" + _month);
+  _d = (_d > 9) ? ("" + _d) : ("0" + _d);
+  return _year + _month + _d;
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getDateStr: getDateStr
 }

@@ -33,5 +33,11 @@ Page({
         wx.hideToast();
       },
     });
+  },
+  viewDoctor(e) {
+    const ds = e.currentTarget.dataset;
+    wx.navigateTo({
+      url: `../schedule/schedule`
+    })
   }
 })

@@ -1,0 +1,34 @@
+<view class="container">
+<view class="m-calendar-body-box">
+<view class="m-calendar-title">
+<view class="m-calendar-title-name">可预约时间</view>
+<view class="m-calendar-title-month">
+<text class="m-calendar-title-month_text {{currentIndex == 0 ? 'm-calendar_current' :''}}">{{currentMonth}}</text>
+<text class="m-calendar-title-month_text {{currentIndex == 1 ? 'm-calendar_current' :''}}">{{nextMonth}}</text>
+</view>
+</view>
+ <view class="table m-calendar-table">
+        <view class="tr">
+            <view class="th">日</view>
+            <view class="th">一</view>
+            <view class="th">二</view>
+            <view class="th">三</view>
+            <view class="th">四</view>
+            <view class="th">五</view>
+            <view class="th">六</view>
+        </view>
+        <swiper bindchange="swipMonth">
+        <swiper-item>
+        <view class="tr" wx:for="{{6}}" wx:for-item="i" wx:key="*this">
+            <view class="td {{dateArr[7*i + j].class}}" wx:for="{{7}}" wx:for-item="j" wx:key="*this">{{dateArr[7*i + j].text}}</view>
+        </view>
+        </swiper-item>
+        <swiper-item>
+        <view class="tr" wx:for="{{6}}" wx:for-item="i" wx:key="*this">
+            <view class="td {{nextDateArr[7*i + j].class}}" wx:for="{{7}}" wx:for-item="j" wx:key="*this">{{nextDateArr[7*i + j].text}}</view>
+        </view>
+        </swiper-item>
+        </swiper>
+    </view>
+</view>
+</view>

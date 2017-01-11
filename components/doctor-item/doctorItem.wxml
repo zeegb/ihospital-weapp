@@ -6,7 +6,7 @@
   <view class="m-doctor-item_text_name">{{doctor.doctorName}}</view>
   <view class="m-doctor-item_text_info m-doctor-item_text_true">{{doctor.title}}</view>
   <view class="m-doctor-item_text_info m-doctor-item_text_true">{{doctor.fee}}元</view>
-  <view class="m-doctor-item_text_info {{doctor.is_hot ? m-doctor-item_text_true : ''}}">热门</view>
+  <view class="m-doctor-item_text_info {{doctor.is_hot ? 'm-doctor-item_text_true' : ''}}">热门</view>
   </view>
   <view class="m-doctor-item_detail"><text>{{doctor.major}}</text></view>
   </view>

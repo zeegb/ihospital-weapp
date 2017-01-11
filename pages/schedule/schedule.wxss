@@ -1,0 +1,54 @@
+.m-calendar-body-box{
+    background: white;
+}
+.tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.th,.td {
+    color: #505050;
+    padding: 10rpx;
+    text-align: center;
+    width:100%;
+}
+.td {
+    font-weight: 600;
+}
+.currentDay {
+    color: red;
+}
+.currentMonth {
+	color: #999;
+}
+.otherMonth{
+	color: #ede;
+}
+.m-calendar-table {
+    margin: 50rpx 0;
+}
+.m-calendar-title{
+    position: relative;
+    height: 50rpx;
+}
+.m-calendar-title-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #505050;
+}
+.m-calendar-title-month{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-weight: 600;
+}
+.m-calendar-title-month_text{
+    margin-right: 20rpx;
+}
+.m-calendar_current {
+    color: red;
+    border-bottom: 4rpx solid red;
+}
