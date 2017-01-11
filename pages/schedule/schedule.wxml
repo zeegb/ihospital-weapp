@@ -1,4 +1,28 @@
 <view class="container">
+<view class="m-doctor-info">
+    <image class="m-doctor-info_img" src="{{doctorInfo.avatar || '../../images/userHead.png'}}"></image>
+    <view class="m-doctor-info_text">
+        <view class="m-doctor-info_title">
+        <view class="m-doctor-info_text_name">{{doctorInfo.doctorName}}</view>
+        <view class="m-doctor-info_text_info">{{doctorInfo.title}}</view>
+        <view class="m-doctor-info_text_info">{{doctorInfo.hospitalName}} {{doctorInfo.deptName}}</view>
+        </view>
+    </view>
+    <view class="m-doctor-info_text_icon">
+        <view class="m-doctor-info_hot">费用</view>
+        <view class="m-doctor-info_fee">{{doctorInfo.fee}}元</view>
+    </view>
+</view>
+<view class="m-doctor-info_detail">
+        <view class="m-doctor-info_detail_text">
+            <text class="m-doctor-info_detail_text_title">擅长领域：</text>
+            <text class="m-doctor-info_detail_text_item">{{doctorInfo.major}}</text>
+        </view>
+        <view class="m-doctor-info_detail_text">
+            <text class="m-doctor-info_detail_text_title">医生介绍：</text>
+            <text class="m-doctor-info_detail_text_item">{{doctorInfo.description}}</text>
+        </view>
+</view>
 <view class="m-calendar-body-box">
 <view class="m-calendar-title">
 <view class="m-calendar-title-name">可预约时间</view>

@@ -1,7 +1,9 @@
 import {getDateStr} from '../../utils/util.js';
+import {getDoctorInfo} from '../../utils/api.js';
 Page({
     data: {
     title: '医生详情',
+    doctorInfo: null,
     dateArr: null,
     nextDateArr: null,
     currentMonth: new Date().getMonth() + 1 + '月',
@@ -15,8 +17,14 @@ Page({
     });
   },
   onLoad(options) {
+        const self = this;
+        const doctorInfo = JSON.parse(options.doctorInfo || {});
+        wx.showToast({
+      title: '正在加载',
+      icon: 'loading'
+    });
     const dateObj = (() => {
-    let _date = new Date();    // 默认为当前系统时间
+    let _date = new Date();
     return {
       getDate() {
         return _date;
@@ -26,7 +34,23 @@ Page({
       }
     };
   })();
-    const self = this;
+const execDateArr = (()=>{
+        return (year,month,firstDay,dateArr) => {
+                let dateJson = {};
+                const _thisDay = new Date(year, month - 1, i + 1 - firstDay.getDay());
+                const _thisDayStr = getDateStr(_thisDay);
+                dateJson.text = _thisDay.getDate();
+                dateJson.date = _thisDayStr;
+                if(_thisDayStr == getDateStr(new Date())) {
+                        dateJson.class = 'currentDay';
+                }else if(_thisDayStr.substr(0, 6) == getDateStr(firstDay).substr(0, 6)) {
+                        dateJson.class = 'currentMonth';
+                }else {
+                        dateJson.class = 'otherMonth';
+                }
+                dateArr.push(dateJson);
+        }
+})();
     const _year = dateObj.getDate().getFullYear();
     const _month = dateObj.getDate().getMonth() + 1;
     const _nextMonth = dateObj.getDate().getMonth() + 2;
@@ -35,38 +59,13 @@ Page({
     let dateArr = [];
     let nextDateArr = [];
     for(var i = 0; i < 42; i++) {
-        let dateJson = {};
-      const _thisDay = new Date(_year, _month - 1, i + 1 - _firstDay.getDay());
-      const _thisDayStr = getDateStr(_thisDay);
-        dateJson.text = _thisDay.getDate();
-        dateJson.date = _thisDayStr;
-      if(_thisDayStr == getDateStr(new Date())) {    // 当前天
-        dateJson.class = 'currentDay';
-      }else if(_thisDayStr.substr(0, 6) == getDateStr(_firstDay).substr(0, 6)) {
-        dateJson.class = 'currentMonth';  // 当前月
-      }else {    // 其他月
-        dateJson.class = 'otherMonth';
-      }
-        dateArr.push(dateJson);
-    }
-    for(var i = 0; i < 42; i++) {
-        let dateJson = {};
-      const _thisDay = new Date(_year, _nextMonth - 1, i + 1 - _nextFirstDay.getDay());
-      const _thisDayStr = getDateStr(_thisDay);
-        dateJson.text = _thisDay.getDate();
-        dateJson.date = _thisDayStr;
-      if(_thisDayStr == getDateStr(new Date())) {    // 当前天
-        dateJson.class = 'currentDay';
-      }else if(_thisDayStr.substr(0, 6) == getDateStr(_nextFirstDay).substr(0, 6)) {
-        dateJson.class = 'currentMonth';  // 当前月
-      }else {    // 其他月
-        dateJson.class = 'otherMonth';
-      }
-        nextDateArr.push(dateJson);
+        execDateArr(_year,_month,_firstDay,dateArr);
+        execDateArr(_year,_nextMonth,_nextFirstDay,nextDateArr);
     }
     self.setData({
         dateArr,
-        nextDateArr
+        nextDateArr,
+        doctorInfo
     });
   },
   swipMonth(e) {

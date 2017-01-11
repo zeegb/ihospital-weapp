@@ -37,7 +37,7 @@ Page({
   viewDoctor(e) {
     const ds = e.currentTarget.dataset;
     wx.navigateTo({
-      url: `../schedule/schedule`
+      url: `../schedule/schedule?doctorInfo=${JSON.stringify(ds.doctorinfo)}`
     })
   }
 })

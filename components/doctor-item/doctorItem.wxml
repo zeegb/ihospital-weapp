@@ -1,5 +1,5 @@
 <template name="m-doctor-item">
-<view class="m-doctor-item" data-did="{{doctor.doctorCode}}" bindtap="viewDoctor">
+<view class="m-doctor-item" data-doctorinfo="{{doctor}}" bindtap="viewDoctor">
 <image class="m-doctor-item_img" src="{{doctor.avatar || '../../images/userHead.png'}}"></image>
 <view class="m-doctor-item_text">
   <view class="m-doctor-item_title">
